@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: #f7faf8;
+    color: #315b55;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    color: #275b54;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin-top: 5px;
+    color: #71847f;
+    font-size: 14px;
+}
+
+/* Add Task Button */
+
+.add-task-button {
+    display: inline-block;
+    margin: 25px 0 20px;
+    padding: 12px 20px;
+    background: #367f70;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-task-button:hover {
+    background: #2d6d61;
+}
+
+/* Task Section */
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.task-header h2 {
+    margin: 0;
+    color: #315b55;
+    font-size: 22px;
+}
+
+/* Task Card */
+
+.task-card {
+    background: white;
+    border: 1px solid #dce8e4;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.task-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-name {
+    font-size: 15px;
+    font-weight: bold;
+    color: #315b55;
+    margin: 0;
+}
+
+.description {
+    font-size: 12px;
+    color: #7b8986;
+    margin: 5px 0 12px;
+}
+
+/* Task Information */
+
+.task-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 12px;
+    color: #71847f;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.pending {
+    background: #fff1c9;
+    color: #9a7517;
+}
+
+.completed {
+    background: #d9f2e3;
+    color: #31805c;
+}
+
+.ongoing {
+    background: #dcecff;
+    color: #3976b7;
+}
+
+/* Buttons */
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+    border: none;
+    padding: 7px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-button {
+    background: #e3f2ec;
+    color: #3b806d;
+}
+
+.delete-button {
+    background: #ffe5e5;
+    color: #d95353;
+}
+
+.edit-button:hover {
+    background: #d5ebe2;
+}
+
+.delete-button:hover {
+    background: #ffd4d4;
+}
+
+/* Form */
+
+.form-container {
+    max-width: 750px;
+    margin: 30px auto;
+    background: white;
+    border: 1px solid #dce8e4;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.form-header {
+    background: #e9f1ed;
+    padding: 15px 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #315b55;
+}
+
+.form-body {
+    padding: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    flex: 1;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #55706a;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #dce7e3;
+    border-radius: 7px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.form-group textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #5a9b8b;
+}
+
+/* Form Buttons */
+
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.submit-button {
+    border: none;
+    background: #367f70;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submit-button:hover {
+    background: #2d6d61;
+}
+
+.cancel-button {
+    background: #eef2f0;
+    color: #55706a;
+    padding: 11px 20px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.cancel-button:hover {
+    background: #e2e8e5;
+}
+
+/* No Tasks */
+
+.no-tasks {
+    background: white;
+    border: 1px solid #dce8e4;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    color: #7b8986;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .task-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .task-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
